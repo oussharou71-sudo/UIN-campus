@@ -1,40 +1,37 @@
-<<<<<<< HEAD
-# UIN-campus
-UIN campus
-=======
 # UIN-Campus
 
-Système de gestion académique de l'UIN — squelette initial du projet du cours de C++.
+Petit projet C++23 du cours de programmation orientée objet. Il contient le fil rouge de saisie et de calcul d'une moyenne, ainsi que le TP 3 de statistiques d'une série de notes.
 
-## Outils utilisés
+## Prérequis
 
-- g++ : 14.2.0
-- clang++ : 18.1.3
-- CMake : 3.28.3
-- Ninja : 1.11.1
-- GDB : 15.1
-- Git : 2.43.0
-- clang-format : 18.1.3
-- clang-tidy : 18.1.3
+- CMake 3.25 ou plus récent
+- Ninja
+- Un compilateur C++23 compatible avec `<format>` et `<print>` (GCC 14+, Clang 18+)
 
-## Construire et exécuter (Debug avec ASan/UBSan)
+## Construire
 
 ```sh
 cmake --preset debug
 cmake --build --preset debug
-./build/debug/uin-campus
 ```
 
-Pour faciliter la détection du projet par clangd :
+## Exécuter
 
 ```sh
-ln -s build/debug/compile_commands.json .
+./build/debug/uin-campus
+./build/debug/uin-campus-statistiques
 ```
 
-## Qualité du code
+La configuration `debug` active AddressSanitizer et UndefinedBehaviorSanitizer. Pour une compilation optimisée :
+
+```sh
+cmake --preset release
+cmake --build --preset release
+```
+
+## Formatage et analyse
 
 ```sh
 clang-format -i include/uincampus/*.hpp src/*.cpp app/*.cpp
 clang-tidy -p build/debug src/*.cpp app/*.cpp
 ```
->>>>>>> 59aef74 ( UIN-Campus)
