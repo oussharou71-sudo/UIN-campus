@@ -1,6 +1,6 @@
 # UIN-Campus
 
-Projet C++23 du cours de programmation orientée objet. Il contient le fil rouge UIN-Campus, le TP 3 de statistiques d'une série de notes et le TP 4 du carnet de notes en mode menu.
+Projet C++23 du cours de programmation orientée objet. Il contient le fil rouge UIN-Campus et les TP 3 (statistiques), 4 (carnet de notes) et 5 (tableau dynamique).
 
 ## Prérequis
 
@@ -21,7 +21,9 @@ cmake --build --preset debug
 ./build/debug/uin-campus
 ./build/debug/uin-campus-statistiques
 ./build/debug/uin-campus-carnet
+./build/debug/uin-campus-tp5
 ./build/debug/uin-campus --version
+./build/debug/uin-campus --aide
 ```
 
 La configuration `debug` active AddressSanitizer et UndefinedBehaviorSanitizer. Pour une compilation optimisée :

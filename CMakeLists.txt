@@ -48,3 +48,6 @@ target_link_libraries(uin-campus-statistiques PRIVATE uincampus_core uincampus_o
 
 add_executable(uin-campus-carnet app/carnet_notes.cpp)
 target_link_libraries(uin-campus-carnet PRIVATE uincampus_core uincampus_options)
+
+add_executable(uin-campus-tp5 app/tp5_tableau_dynamique.cpp)
+target_link_libraries(uin-campus-tp5 PRIVATE uincampus_options)

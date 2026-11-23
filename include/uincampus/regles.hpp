@@ -1,6 +1,6 @@
 #pragma once
 
-#include <cstdint>
+#include <array>
 #include <string_view>
 
 namespace uin {
@@ -9,7 +9,11 @@ inline constexpr double noteMin{0.0};
 inline constexpr double noteMax{20.0};
 inline constexpr double seuilValidation{10.0};
 
-enum class Mention : std::uint8_t { Ajourne, Passable, AssezBien, Bien, TresBien };
+enum class Mention { Ajourne, Passable, AssezBien, Bien, TresBien };
+
+inline constexpr std::array seuilsMentions{10.0, 12.0, 14.0, 16.0};
+static_assert(seuilsMentions.size() == 4);
+static_assert(seuilsMentions[0] == seuilValidation);
 
 constexpr bool estNoteValide(double note)
 {
