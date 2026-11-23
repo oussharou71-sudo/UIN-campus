@@ -4,6 +4,6 @@
 
 namespace uin {
 
-std::string_view version();
+[[nodiscard]] std::string_view version();
 
 } // namespace uin

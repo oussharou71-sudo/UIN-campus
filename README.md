@@ -1,6 +1,6 @@
 # UIN-Campus
 
-Petit projet C++23 du cours de programmation orientée objet. Il contient le fil rouge de saisie et de calcul d'une moyenne, ainsi que le TP 3 de statistiques d'une série de notes.
+Projet C++23 du cours de programmation orientée objet. Il contient le fil rouge UIN-Campus, le TP 3 de statistiques d'une série de notes et le TP 4 du carnet de notes en mode menu.
 
 ## Prérequis
 
@@ -20,6 +20,8 @@ cmake --build --preset debug
 ```sh
 ./build/debug/uin-campus
 ./build/debug/uin-campus-statistiques
+./build/debug/uin-campus-carnet
+./build/debug/uin-campus --version
 ```
 
 La configuration `debug` active AddressSanitizer et UndefinedBehaviorSanitizer. Pour une compilation optimisée :

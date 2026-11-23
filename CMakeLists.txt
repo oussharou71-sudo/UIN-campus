@@ -34,6 +34,7 @@ add_library(uincampus_core
     src/version.cpp
     src/regles.cpp
     src/saisie.cpp
+    src/calculs.cpp
 )
 target_include_directories(uincampus_core PUBLIC ${PROJECT_SOURCE_DIR}/include)
 target_compile_definitions(uincampus_core PRIVATE UIN_VERSION="${PROJECT_VERSION}")
@@ -44,3 +45,6 @@ target_link_libraries(uin-campus PRIVATE uincampus_core uincampus_options)
 
 add_executable(uin-campus-statistiques app/tp3_statistiques.cpp)
 target_link_libraries(uin-campus-statistiques PRIVATE uincampus_core uincampus_options)
+
+add_executable(uin-campus-carnet app/carnet_notes.cpp)
+target_link_libraries(uin-campus-carnet PRIVATE uincampus_core uincampus_options)

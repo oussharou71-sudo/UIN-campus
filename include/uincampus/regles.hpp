@@ -16,7 +16,7 @@ constexpr bool estNoteValide(double note)
     return note >= noteMin && note <= noteMax;
 }
 
-Mention mentionPour(double moyenne);
-std::string_view libelle(Mention mention);
+[[nodiscard]] Mention mentionPour(double moyenne);
+[[nodiscard]] std::string_view libelle(Mention mention);
 
 } // namespace uin
